@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KlogIn</string>
+    <string name="home">HOME</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="title_activity_sign_up">SignUP</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
