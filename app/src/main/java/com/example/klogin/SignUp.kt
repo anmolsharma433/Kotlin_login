@@ -26,16 +26,33 @@ class SignUp : AppCompatActivity() {
                 startActivity(Intent(this,MainActivity::class.java))
             }
             else{
-                alertDialog()
+
             }
         }
 
 
     }
-    private fun alertDialog() {
+    private fun alertDialogmismatch() {
         val dialog = AlertDialog.Builder(this)
         dialog.setTitle("Password mismatch")
         dialog.setMessage("Confirm password Doesn't match")
+
+        dialog.setPositiveButton(
+            "ok"
+        ) { dialog, which -> }
+        dialog.setNegativeButton(
+            "Cancel"
+        ) { dialog, which -> }
+        val alertDialog = dialog.create()
+        alertDialog.show()
+    }
+
+
+    private fun alertDialogempty(choice: Int) {
+        val dialog = AlertDialog.Builder(this)
+        dialog.setTitle("ERROR")
+        dialog.setMessage("Password Fields can't be empty");
+
         dialog.setPositiveButton(
             "ok"
         ) { dialog, which -> }

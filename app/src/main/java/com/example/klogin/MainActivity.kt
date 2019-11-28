@@ -17,12 +17,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         handler = DatabaseHandler(this)
+        //This is btn login
         btnLogin.setOnClickListener {
         if(handler.userPresent(etEmail.text.toString(),etPassword.text.toString()))
         {
             Toast.makeText(this,"You are Successfully logged in.",Toast.LENGTH_SHORT).show()
         }
         }
+        //This is btn SignUP
         btnSignup.setOnClickListener {
         startActivity(Intent(this,SignUp::class.java))
         }

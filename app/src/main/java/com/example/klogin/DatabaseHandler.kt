@@ -26,14 +26,14 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, Database_nam
         var cv = ContentValues()
         cv.put("Col_Username",colemail)
         cv.put("Col_Password",colpwd)
-        database.insert(Database_name,null,cv)
+            database.insert(Database_name,null,cv)
         database.close()
     }
 
     fun userPresent(colemail: String,colpwd: String): Boolean {
-        val databse =this.writableDatabase
+        val database =this.writableDatabase
         val query = "select * from UserData where Col_Username = '$colemail' and Col_Password = '$colpwd'"
-        val cursor = databse.rawQuery(query,null)
+        val cursor = database.rawQuery(query,null)
         if (cursor.count <= 0){
             cursor.close()
             return false
@@ -42,6 +42,9 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, Database_nam
         return true
 
     }
+
+
+
 
 
 
