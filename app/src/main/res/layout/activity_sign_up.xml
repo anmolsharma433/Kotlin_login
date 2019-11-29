@@ -9,29 +9,32 @@
 
     <EditText
         android:id="@+id/etruname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="95dp"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="130dp"
         android:backgroundTint="#CD4B4545"
+        android:drawableLeft="@drawable/ic_person_name"
         android:ems="10"
-        android:hint="Enter Your Username"
+        android:hint="@string/enter_username"
         android:inputType="textPersonName"
+        android:textAlignment="center"
         android:textColor="#CD4B4545"
+        android:textColorHint="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/txtSignUp" />
 
     <EditText
         android:id="@+id/etrpwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="86dp"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#CD4B4545"
+        android:textColorHint="@color/grey"
+        android:textAlignment="center"
         android:ems="10"
+        android:drawableLeft="@drawable/ic_pass_name"
+        android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="#CD4B4545"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,13 +43,15 @@
 
     <EditText
         android:id="@+id/etrcpwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="87dp"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#CD4B4545"
+        android:textColorHint="@color/grey"
+        android:textAlignment="center"
         android:ems="10"
+        android:drawableLeft="@drawable/ic_pass_name"
+        android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="#CD4B4545"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,14 +60,26 @@
 
     <Button
         android:id="@+id/btnSignUppage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="77dp"
-        android:layout_marginEnd="156dp"
-        android:text="Button"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/materialred"
+        android:text="SignUp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etrcpwd" />
+
+    <TextView
+        android:id="@+id/txtSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/title_activity_sign_up"
+        android:textColor="@color/materialred"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

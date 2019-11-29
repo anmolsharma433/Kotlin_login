@@ -20,19 +20,24 @@ class SignUp : AppCompatActivity() {
             var uname = etruname.text.toString()
             var pwd = etrpwd.text.toString()
             var cpwd = etrcpwd.text.toString()
-            if(pwd.equals(cpwd)){
-                data.inserData(uname,pwd)
-                Toast.makeText(this,"You are Signed Up SuccessFully.",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,MainActivity::class.java))
+            if (uname.isNotEmpty() || pwd.isNotEmpty() || cpwd.isNotEmpty()) {
+                if (pwd.equals(cpwd)) {
+                    data.inserData(uname, pwd)
+                    Toast.makeText(this, "You are Signed Up SuccessFully.", Toast.LENGTH_SHORT)
+                        .show()
+                    startActivity(Intent(this, MainActivity::class.java))
+                } else {
+                    alertDialogmismatch()
+                }
             }
             else{
-
+                alertDialogempty()
             }
         }
 
 
     }
-    private fun alertDialogmismatch() {
+    public fun alertDialogmismatch() {
         val dialog = AlertDialog.Builder(this)
         dialog.setTitle("Password mismatch")
         dialog.setMessage("Confirm password Doesn't match")
@@ -48,7 +53,7 @@ class SignUp : AppCompatActivity() {
     }
 
 
-    private fun alertDialogempty(choice: Int) {
+    public fun alertDialogempty() {
         val dialog = AlertDialog.Builder(this)
         dialog.setTitle("ERROR")
         dialog.setMessage("Password Fields can't be empty");
